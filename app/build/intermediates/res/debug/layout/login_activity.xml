@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:background="@drawable/home1"
+    android:gravity="center_horizontal"
+    >
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:alpha=".80"
+    android:layout_height="fill_parent">
+
+    <EditText
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Email_Id"
+        android:hint="Email_Id"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="PassWord"
+        android:layout_marginTop="10dp"
+        android:id="@+id/PassWord"
+        android:layout_below="@+id/Email_Id"
+        android:layout_alignLeft="@+id/Email_Id"
+        android:layout_alignRight="@+id/Email_Id" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="32dp"
+        android:text="Login"
+        android:id="@+id/button"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:onClick="login"
+         android:paddingRight="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="4dp"
+        android:paddingLeft="5dp"
+        android:layout_alignLeft="@+id/PassWord"
+        android:layout_below="@+id/PassWord"
+         />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="32dp"
+        android:text="Sign_Up"
+        android:id="@+id/button3"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="5dp"
+        android:background="#ffffff"
+        android:onClick="Sign_up"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:layout_alignRight="@+id/PassWord"
+        android:layout_alignEnd="@+id/PassWord" />
+
+</RelativeLayout>
+
+</RelativeLayout>
+<!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/layout/login_activity.xml -->

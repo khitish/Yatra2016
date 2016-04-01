@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="10dip">
+
+    <WebView
+        android:id="@+id/poi_img"
+        android:layout_width="250dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/poi_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@+id/poi_img"
+        android:layout_marginLeft="10dp"
+        android:text="1"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/poi_img"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/poi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Place"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:id="@+id/poi_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Price"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+
+</RelativeLayout> <!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/layout/place_to_visit.xml -->
