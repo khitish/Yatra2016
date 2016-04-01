@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="rivers">
         <item>My Visited Places</item>
@@ -9,17 +9,30 @@
         <item>top Rated Destinations</item>
 
     </string-array>
-    <!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black">#000000</color>
+    <color name="blue_shade1">#070E75</color>
+    <color name="blue_shade2">#000424</color>
+    <color name="dark_yellow">#FFCF79</color>
+    <color name="gold">#D4AF37</color>
+    <color name="green">#7BB31A</color>
+    <color name="orange">#F6811F</color>
+    <color name="sky_blue">#42c7f2</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#ffff22</color>
+    <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">FirstJsonExUrl</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="hello">Hello World, FirstJsonExUrlActivity!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_home__acitivity">Home_Acitivity</string>
     <string name="title_activity_main_activity1">MainActivity1</string>

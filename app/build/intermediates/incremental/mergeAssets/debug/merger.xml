@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="I:\yatra\FirstJsonEx2\app\src\main\assets"/></dataSet><dataSet config="debug"><source path="I:\yatra\FirstJsonEx2\app\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/debug/assets"/></dataSet></merger>

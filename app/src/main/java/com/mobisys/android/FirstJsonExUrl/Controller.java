@@ -1,4 +1,4 @@
-package travelx;
+package com.mobisys.android.FirstJsonExUrl;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+
 
 /**
  * Created by khitishbiswal on 4/1/16.
@@ -29,12 +30,21 @@ public class Controller {
     }
 
     public String getFullCityName(String starting){
-        return "Bangkok";
+        String city = "";
+        for(int i=0;i<Constants.CITIES.length;i++){
+            String currentCity = Constants.CITIES[i];
+            String lowerCity = currentCity.toLowerCase();
+            String lowerStarting = starting.toLowerCase();
+            if(lowerCity.startsWith(lowerStarting)){
+                return currentCity;
+            }
+        }
+        return city;
     }
 
     public void sendPOIRequest(String city){
-        String url = Constants.BASE_POI_URL;
-        url += "apikey="+Constants.APP_KEY;
+        String url = com.mobisys.android.FirstJsonExUrl.Constants.BASE_POI_URL;
+        url += "apikey="+ Constants.APP_KEY;
         String availableCity = getFullCityName(city);
         if(availableCity == ""){
             return;
@@ -98,7 +108,7 @@ public class Controller {
 
         @Override
         protected void onPostExecute(String result) {
-            Log.d(Constants.APP_NAME, "Calling Post " + result);
+            Log.d(Constants.APP_NAME, "Calling Post Execute" + result);
             processResult(result);
         }
     }
@@ -121,8 +131,8 @@ public class Controller {
                 pv.setParams(title, imgUrl, budget, rank);
                 list.add(pv);
             }
-            if(activity instanceof MainActivity){
-                ((MainActivity)activity).loadList(list);
+            if(activity instanceof MainActivityTop){
+                PlanTrip.loadList(list);
             }
         }catch (Exception e) {
             e.printStackTrace();

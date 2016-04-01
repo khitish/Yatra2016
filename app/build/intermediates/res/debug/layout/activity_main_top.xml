@@ -17,4 +17,4 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
         android:background="#111"/>
-</android.support.v4.widget.DrawerLayout><!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/layout/activity_main_top.xml -->
+</android.support.v4.widget.DrawerLayout><!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/layout/activity_main_top.xml -->

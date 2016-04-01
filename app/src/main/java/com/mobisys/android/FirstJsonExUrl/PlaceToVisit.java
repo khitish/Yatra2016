@@ -1,4 +1,4 @@
-package travelx;
+package com.mobisys.android.FirstJsonExUrl;
 
 /**
  * Created by khitishbiswal on 4/1/16.

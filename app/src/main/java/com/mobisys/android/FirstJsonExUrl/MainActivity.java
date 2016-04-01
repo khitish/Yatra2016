@@ -1,11 +1,9 @@
-package travelx;
+package com.mobisys.android.FirstJsonExUrl;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.ListView;
-
-import com.mobisys.android.FirstJsonExUrl.R;
 
 import java.util.ArrayList;
 

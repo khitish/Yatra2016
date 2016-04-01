@@ -1,4 +1,4 @@
-package travelx;
+package com.mobisys.android.FirstJsonExUrl;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-import com.mobisys.android.FirstJsonExUrl.R;
 
 import java.util.ArrayList;
 
@@ -24,14 +22,6 @@ public class ListAdapter extends ArrayAdapter<PlaceToVisit> {
         super(context,-1, values);
         this.context = context;
         this.places = values;
-    }
-
-    public PlaceToVisit get(int pos){
-        if(pos < this.places.size()){
-            return this.places.get(pos);
-        }else{
-            return null;
-        }
     }
 
     @Override

@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mobisys.android.FirstJsonExUrl.PlanTrip">
+
+    <ListView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5.0sp"
+        />
+
+</FrameLayout>
+<!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/layout/fragment_plan_trip.xml -->

@@ -3,7 +3,6 @@ package com.mobisys.android.FirstJsonExUrl;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -14,8 +13,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import travelx.MainActivity;
 
 public class MainActivityTop extends Activity {
 
@@ -30,6 +27,7 @@ public class MainActivityTop extends Activity {
 	
 	// Title of the action bar
 	String mTitle="";
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +104,7 @@ public class MainActivityTop extends Activity {
 				
 				
 				// Creating a fragment object
-				RiverFragment rFragment = new RiverFragment();
+				PlanTrip rFragment = new PlanTrip();
 				
 				// Creating a Bundle object
 				Bundle data = new Bundle();
@@ -135,6 +133,8 @@ public class MainActivityTop extends Activity {
 			}
 		});	
 	}
+
+
 	
 	
 	 @Override
@@ -170,11 +170,5 @@ public class MainActivityTop extends Activity {
 		getMenuInflater().inflate(R.menu.menu_main_activity1, menu);
 		return true;
 	}
-    public void kkkkkk(View v){
 
-        Bundle b = new Bundle();
-        Intent intent = new Intent(MainActivityTop.this, MainActivity.class);
-        intent.putExtras(b);
-        startActivity(intent);
-    }
 }

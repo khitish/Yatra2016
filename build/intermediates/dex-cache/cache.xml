@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Vikash Gupta\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jar="/Users/khitishbiswal/android-sdks/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="I:\yatra\FirstJsonEx2\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-6b7fd1b5384e6cce7c9c8532607f1b2a5121de28.jar" />
+        <dex dex="/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-dc9399c6e7829d132139d6004103ffbcb9d611e2.jar" />
     </item>
 
 </items>

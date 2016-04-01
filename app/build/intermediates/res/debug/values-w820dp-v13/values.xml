@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/values-w820dp/colors.xml -->
+    <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values-w820dp/colors.xml -->
     <eat-comment/>
     <color name="black">#000000</color>
     <color name="blue_shade1">#070E75</color>
@@ -12,7 +12,7 @@
     <color name="sky_blue">#42c7f2</color>
     <color name="white">#ffffff</color>
     <color name="yellow">#ffff22</color>
-    <!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/values-w820dp/dimens.xml -->
+    <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values-w820dp/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">64dp</dimen>
 </resources>
