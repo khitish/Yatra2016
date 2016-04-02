@@ -36,7 +36,7 @@ public class FirstJsonExUrlActivity extends Activity  {
                 if("authenticatedUser".equals(json)){
                     Log.d("login main","");
                     Bundle b = new Bundle();
-                    Intent intent = new Intent(getApplicationContext(),MainActivityTop.class);
+                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     intent.putExtras(b);
                     startActivity(intent);
 
