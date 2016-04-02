@@ -4,7 +4,7 @@
     tools:context="com.mobisys.android.FirstJsonExUrl.PlanTrip">
 
     <ListView
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
         android:divider="@android:color/transparent"

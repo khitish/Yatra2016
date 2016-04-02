@@ -131,7 +131,7 @@ public class Controller {
                 pv.setParams(title, imgUrl, budget, rank);
                 list.add(pv);
             }
-            if(activity instanceof MainActivityTop){
+            if(activity instanceof MainActivity){
                 PlanTrip.loadList(list);
             }
         }catch (Exception e) {
