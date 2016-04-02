@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+        
 		mTitle = (String) getTitle();
 
 		// Getting reference to the DrawerLayout
@@ -204,6 +204,7 @@ public class MainActivity extends Activity {
 				openPlanTrip();
 				break;
             case 3:
+                openPlanTrip();
                 search();
                 break;
 		}

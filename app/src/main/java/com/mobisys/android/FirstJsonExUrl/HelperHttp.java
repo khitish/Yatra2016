@@ -99,8 +99,6 @@ public class HelperHttp {
 		    System.out.println("Json Response==>"+json_string);
               if("authenticatedUser".equals(json_string)){
                   Log.d("login","");
-
-
               }else{
                  Log.d("not login","");
 //

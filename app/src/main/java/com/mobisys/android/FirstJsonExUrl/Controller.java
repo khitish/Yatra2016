@@ -1,6 +1,7 @@
 package com.mobisys.android.FirstJsonExUrl;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -129,9 +130,14 @@ public class Controller {
 
             return resp;
         }
-
+        public ProgressDialog prog;
         @Override
         protected void onPostExecute(String result) {
+
+            if (prog != null) {
+                prog.dismiss();
+                prog = null;
+            }
             Log.d(Constants.APP_NAME, "Calling Post Execute" + result);
             if(reqType == Constants.BASE_POI_URL) {
                 processPOIResult(result);
