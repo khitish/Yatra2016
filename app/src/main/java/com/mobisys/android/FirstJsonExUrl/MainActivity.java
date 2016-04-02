@@ -100,24 +100,28 @@ public class MainActivity extends Activity {
 
 	private void openFragment(int position){
 
-		String[] rivers = getResources().getStringArray(R.array.DrawerOptions);
-
-		//Currently selected river
-		mTitle = rivers[position];
+		String[] options = getResources().getStringArray(R.array.DrawerOptions);
+		mTitle = options[position];
+		this.getActionBar().setTitle(options[position]);
 
 		// Creating a fragment object
+
+		switch(position){
+			case 0:
+				openTrending();
+				break;
+			case 1:
+				openPlanTrip();
+				break;
+		}
+
+		mDrawerLayout.closeDrawer(mDrawerList);
+
+	}
+
+	private void openPlanTrip(){
 		PlanTrip rFragment = new PlanTrip();
 
-		// Creating a Bundle object
-		Bundle data = new Bundle();
-
-		// Setting the index of the currently selected item of mDrawerList
-		data.putInt("position", position);
-
-		// Setting the position to the fragment
-		rFragment.setArguments(data);
-
-		// Getting reference to the FragmentManager
 		FragmentManager fragmentManager  = getFragmentManager();
 
 		// Creating a fragment transaction
@@ -128,7 +132,23 @@ public class MainActivity extends Activity {
 
 		// Committing the transaction
 		ft.commit();
-		mDrawerLayout.closeDrawer(mDrawerList);
+
+	}
+
+	private void openTrending(){
+
+		trending rFragment = new trending();
+
+		FragmentManager fragmentManager  = getFragmentManager();
+
+		// Creating a fragment transaction
+		FragmentTransaction ft = fragmentManager.beginTransaction();
+
+		// Adding a fragment to the fragment transaction
+		ft.replace(R.id.content_frame, rFragment);
+
+		// Committing the transaction
+		ft.commit();
 
 	}
 

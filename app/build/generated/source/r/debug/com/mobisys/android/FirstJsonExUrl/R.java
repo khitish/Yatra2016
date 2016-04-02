@@ -63,9 +63,10 @@ public final class R {
         public static final int activity_plan=0x7f030001;
         public static final int drawer_list_item=0x7f030002;
         public static final int fragment_plan_trip=0x7f030003;
-        public static final int login_activity=0x7f030004;
-        public static final int place_to_visit=0x7f030005;
-        public static final int signup_activity=0x7f030006;
+        public static final int fragment_trending=0x7f030004;
+        public static final int login_activity=0x7f030005;
+        public static final int place_to_visit=0x7f030006;
+        public static final int signup_activity=0x7f030007;
     }
     public static final class menu {
         public static final int menu_home__acitivity=0x7f080000;

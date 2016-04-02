@@ -21,12 +21,17 @@ import java.util.ArrayList;
 public class Controller {
     private String resp = "";
     private Activity activity = null;
+    private String reqType;
     public Controller(){
 
     }
 
     public void setActivity(Activity activity){
         this.activity = activity;
+    }
+
+    public void setReqType(String type){
+        reqType = type;
     }
 
     public String getFullCityName(String starting){
@@ -43,13 +48,32 @@ public class Controller {
     }
 
     public void sendPOIRequest(String city){
-        String url = com.mobisys.android.FirstJsonExUrl.Constants.BASE_POI_URL;
+        setReqType(Constants.BASE_POI_URL);
+        String url = Constants.BASE_POI_URL;
         url += "apikey="+ Constants.APP_KEY;
         String availableCity = getFullCityName(city);
         if(availableCity == ""){
             return;
         }
         url += "&city_name="+availableCity;
+        sendRequest(url, "GET");
+    }
+
+    public void sendNearestAirportReq(double lat, double longi){
+        setReqType(Constants.BASE_AIR_URL);
+        String url = Constants.BASE_AIR_URL;
+        url += "apikey="+ Constants.APP_KEY;
+        url += "&latitude="+lat;
+        url += "&longitude="+longi;
+        sendRequest(url, "GET");
+    }
+
+    public void sendTrending(String cityCode){
+        setReqType(Constants.BASE_TREND_URL);
+        String url = Constants.BASE_TREND_URL;
+        url += "apikey="+ Constants.APP_KEY;
+        url += "&period=2015-09";
+        url += "&origin="+cityCode;
         sendRequest(url, "GET");
     }
 
@@ -109,12 +133,33 @@ public class Controller {
         @Override
         protected void onPostExecute(String result) {
             Log.d(Constants.APP_NAME, "Calling Post Execute" + result);
-            processResult(result);
+            if(reqType == Constants.BASE_POI_URL) {
+                processPOIResult(result);
+            }else if(reqType == Constants.BASE_AIR_URL){
+                processAirReq(result);
+            }else if(reqType == Constants.BASE_TREND_URL){
+                Log.d(Constants.APP_NAME, result);
+            }
+        }
+    }
+
+    private void processAirReq(String resp){
+        try{
+            JSONArray airArray = new JSONArray(resp);
+            if(airArray.length() > 0){
+                JSONObject jsonObject = airArray.getJSONObject(0);
+                String city = jsonObject.getString("city");
+                sendTrending(city);
+                Log.d(Constants.APP_NAME, city);
+            }
+
+        }catch (Exception e){
+
         }
     }
 
 
-    private void processResult(String resp){
+    private void processPOIResult(String resp){
         try {
             JSONObject res = new JSONObject(resp);
             JSONArray poiArray = res.getJSONArray("points_of_interest");

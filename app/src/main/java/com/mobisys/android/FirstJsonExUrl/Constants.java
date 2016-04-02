@@ -6,8 +6,10 @@ package com.mobisys.android.FirstJsonExUrl;
 public class Constants {
 
     public static final String APP_NAME = "Travelx";
-    public static final String APP_KEY  = "Cqznv0xXKkya2eYsrfQ6GkzDknGP2GBs";
+    public static final String APP_KEY = "Cqznv0xXKkya2eYsrfQ6GkzDknGP2GBs";
     public static final String BASE_POI_URL = "https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?";
+    public static final String BASE_AIR_URL = "http://api.sandbox.amadeus.com/v1.2/airports/nearest-relevant?";
+    public static final String BASE_TREND_URL = "https://api.sandbox.amadeus.com/v1.2/travel-intelligence/top-destinations?";
 
     public static String[] CITIES = {"Abu Dhabi", "Antalya", "Atlanta", "Auckland",
             "Baku", "Bangkok", "Barcelona", "Beijing", "Berlin", "Bilbao", "Birmingham", "Bratislava", "Bucharest", "Budapest",
