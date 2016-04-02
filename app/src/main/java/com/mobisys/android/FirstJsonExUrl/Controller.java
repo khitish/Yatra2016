@@ -138,8 +138,31 @@ public class Controller {
             }else if(reqType == Constants.BASE_AIR_URL){
                 processAirReq(result);
             }else if(reqType == Constants.BASE_TREND_URL){
-                Log.d(Constants.APP_NAME, result);
+                processTrendingReq(result);
             }
+        }
+    }
+
+    private void processTrendingReq(String resp){
+        try{
+            JSONObject res = new JSONObject(resp);
+            JSONArray trendArray = res.getJSONArray("results");
+            ArrayList<TrendingPlace> list = new ArrayList<TrendingPlace>();
+            for(int i=0;i<trendArray.length();i++){
+                JSONObject trendObj = trendArray.getJSONObject(i);
+                String name = trendObj.getString("destination");
+                int travellers = trendObj.getInt("travelers");
+                int flights = trendObj.getInt("flights");
+                TrendingPlace tp = new TrendingPlace();
+                tp.setParams(name, flights, travellers);
+                list.add(tp);
+            }
+            if(activity instanceof MainActivity){
+                trending.loadList(list);
+            }
+
+        }catch (Exception e){
+
         }
     }
 
