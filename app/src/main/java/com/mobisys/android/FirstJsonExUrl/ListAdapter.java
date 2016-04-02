@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class ListAdapter extends ArrayAdapter<PlaceToVisit> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.place_to_visit, parent, false);
@@ -46,6 +47,20 @@ public class ListAdapter extends ArrayAdapter<PlaceToVisit> {
         String imgUrl = places.get(position).getImgUrl();
         poiWebView.loadUrl(imgUrl);
 
+        CheckBox checkBox = (CheckBox) rowView.findViewById(R.id.poi_id);
+        boolean checked = PlanTrip.isChecked(places.get(position));
+        checkBox.setChecked(checked);
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox cv = (CheckBox)v;
+                if(cv.isChecked()){
+                    PlanTrip.addPlaceToPlan(places.get(position));
+                }else{
+                    PlanTrip.removePlace(places.get(position));
+                }
+            }
+        });
         return rowView;
     }
 

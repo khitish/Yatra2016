@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main_top);
+		setContentView(R.layout.activity_main);
 		
 		
 		mTitle = (String) getTitle();
@@ -135,12 +135,11 @@ public class MainActivity extends Activity {
 	}
 
 
-	
-	
 	 @Override
 	 protected void onPostCreate(Bundle savedInstanceState) {
 		 super.onPostCreate(savedInstanceState);	     
-	     mDrawerToggle.syncState();	
+	     mDrawerToggle.syncState();
+		 mDrawerLayout.performClick();
 	 }
 	
 	/** Handling the touch event of app icon */
