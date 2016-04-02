@@ -1,5 +1,6 @@
 package com.mobisys.android.FirstJsonExUrl;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +19,16 @@ public class ListAdapter extends ArrayAdapter<PlaceToVisit> {
 
     private final Context context;
     private ArrayList<PlaceToVisit> places;
+    private Fragment fragment = null;
 
     public ListAdapter(Context context, ArrayList<PlaceToVisit> values) {
         super(context,-1, values);
         this.context = context;
         this.places = values;
+    }
+
+    public void setFragment(Fragment fragment){
+        this.fragment = fragment;
     }
 
     @Override
