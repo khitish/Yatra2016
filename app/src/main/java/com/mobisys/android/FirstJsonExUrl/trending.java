@@ -1,6 +1,7 @@
 package com.mobisys.android.FirstJsonExUrl;
 
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
@@ -15,6 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Handler;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -25,6 +29,8 @@ public class trending extends Fragment {
     AppLocationService appLocationService = null;
     Controller controller = null;
     private Fragment fragment = null;
+    private static Activity activity =null;
+    private static ListView listView = null;
 
     public trending() {
         // Required empty public constructor
@@ -35,8 +41,10 @@ public class trending extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_plan_trip, container, false);
+        View v = inflater.inflate(R.layout.fragment_trending, container, false);
         fragment = this;
+        listView = (ListView) v.findViewById(R.id.listView);
+        activity = this.getActivity();
         appLocationService = new AppLocationService(
                 this.getActivity());
         setupLocation();
@@ -62,6 +70,11 @@ public class trending extends Fragment {
         } else {
             showSettingsAlert();
         }
+    }
+
+    public static void loadList(ArrayList<TrendingPlace> list){
+        TrendListAdapter listAdapter = new TrendListAdapter(activity, list);
+        listView.setAdapter(listAdapter);
     }
 
 

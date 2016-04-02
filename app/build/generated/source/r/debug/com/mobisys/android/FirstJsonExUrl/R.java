@@ -43,7 +43,7 @@ public final class R {
         public static final int Email_Id=0x7f090009;
         public static final int PassWord=0x7f09000a;
         public static final int Repassword=0x7f090014;
-        public static final int action_settings=0x7f090017;
+        public static final int action_settings=0x7f09001a;
         public static final int button=0x7f09000b;
         public static final int button2=0x7f090004;
         public static final int button3=0x7f09000c;
@@ -62,6 +62,9 @@ public final class R {
         public static final int poi_rank=0x7f09000f;
         public static final int searchfield=0x7f090000;
         public static final int signup=0x7f090016;
+        public static final int trend_flights=0x7f090018;
+        public static final int trend_name=0x7f090017;
+        public static final int trend_travellers=0x7f090019;
         public static final int tv_content=0x7f090005;
     }
     public static final class layout {
@@ -77,6 +80,7 @@ public final class R {
         public static final int login_activity=0x7f030009;
         public static final int place_to_visit=0x7f03000a;
         public static final int signup_activity=0x7f03000b;
+        public static final int trending_place=0x7f03000c;
     }
     public static final class menu {
         public static final int menu_home__acitivity=0x7f080000;
