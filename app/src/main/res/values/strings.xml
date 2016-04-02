@@ -11,8 +11,10 @@
     <string-array name="rivers">
         <item >My Visited Places</item>
         <item >Planner</item>
-        <item >top Rated Destinations</item>
-        <item >top Rated Destinations</item>
+        <item >Top Rated Destinations</item>
+        <item >Search</item>
+        <item >LogOut</item>
+
 
     </string-array>
     <string name="drawer_open">Open navigation drawer</string>

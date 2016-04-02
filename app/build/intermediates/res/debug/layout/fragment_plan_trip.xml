@@ -2,14 +2,27 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mobisys.android.FirstJsonExUrl.PlanTrip">
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <ListView
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
+        android:layout_below="@+id/list_view"
         android:divider="@android:color/transparent"
         android:dividerHeight="5.0sp"
         />
 
+</RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="wrap_content"
+        android:background="#0000"
+
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+          />
 </FrameLayout>
-<!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/layout/fragment_plan_trip.xml -->
+<!-- From: file:/I:/yatra/FirstJsonEx2/app/src/main/res/layout/fragment_plan_trip.xml -->

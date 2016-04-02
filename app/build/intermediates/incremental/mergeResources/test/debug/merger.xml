@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/androidTest/res"/><source path="/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/build/generated/res/rs/test/debug"/><source path="/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/build/generated/res/generated/test/debug"/></dataSet><mergedItems/></merger>
+<merger version="3"><dataSet config="main"><source path="I:\yatra\FirstJsonEx2\app\src\androidTest\res"/><source path="I:\yatra\FirstJsonEx2\app\build\generated\res\rs\test\debug"/><source path="I:\yatra\FirstJsonEx2\app\build\generated\res\generated\test\debug"/></dataSet><mergedItems/></merger>
