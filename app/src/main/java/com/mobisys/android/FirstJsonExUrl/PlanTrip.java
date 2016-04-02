@@ -28,7 +28,7 @@ public class PlanTrip extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_plan_trip, container, false);
         int position = getArguments().getInt("position");
-        String[] rivers = getResources().getStringArray(R.array.rivers);
+        String[] rivers = getResources().getStringArray(R.array.DrawerOptions);
 
         getActivity().getActionBar().setTitle(rivers[position]);
         listView = (ListView) v.findViewById(R.id.listView);

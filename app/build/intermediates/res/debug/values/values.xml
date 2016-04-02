@@ -2,12 +2,12 @@
 <resources>
     <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string-array name="rivers">
-        <item>My Visited Places</item>
-        <item>Planner</item>
-        <item>top Rated Destinations</item>
-        <item>top Rated Destinations</item>
-
+    <string-array name="DrawerOptions">
+        <item>Trending Destinations</item>
+        <item>Plan a Trip</item>
+        <item>My Past Trips</item>
+        <item>Search</item>
+        <item>Logout</item>
     </string-array>
     <!-- From: file:/Users/khitishbiswal/hackathons2016/yatra2016/Yatra2016/app/src/main/res/values/colors.xml -->
     <eat-comment/>

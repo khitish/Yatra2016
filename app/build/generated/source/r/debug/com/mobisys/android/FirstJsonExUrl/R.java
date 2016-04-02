@@ -9,7 +9,7 @@ package com.mobisys.android.FirstJsonExUrl;
 
 public final class R {
     public static final class array {
-        public static final int rivers=0x7f040000;
+        public static final int DrawerOptions=0x7f040000;
     }
     public static final class attr {
     }

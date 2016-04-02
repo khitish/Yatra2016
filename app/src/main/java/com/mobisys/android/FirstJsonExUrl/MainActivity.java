@@ -34,11 +34,9 @@ public class MainActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		
+
 		mTitle = (String) getTitle();
-		
-		
+
 		// Getting reference to the DrawerLayout
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		
@@ -61,7 +59,6 @@ public class MainActivity extends Activity {
 
             /** Called when a drawer is opened */
             public void onDrawerOpened(View drawerView) {
-                getActionBar().setTitle("Select a river");
                 invalidateOptionsMenu();
             }
 			
@@ -74,7 +71,7 @@ public class MainActivity extends Activity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
 					getBaseContext(), 
 					R.layout.drawer_list_item  , 
-					getResources().getStringArray(R.array.rivers) 
+					getResources().getStringArray(R.array.DrawerOptions)
 				);
 		
 		// Setting the adapter on mDrawerList
@@ -95,51 +92,51 @@ public class MainActivity extends Activity {
 							View view,
 							int position,
 							long id) {			
-				
-				// Getting an array of rivers
-				String[] rivers = getResources().getStringArray(R.array.rivers);
-				
-				//Currently selected river
-				mTitle = rivers[position];				
-				
-				
-				// Creating a fragment object
-				PlanTrip rFragment = new PlanTrip();
-				
-				// Creating a Bundle object
-				Bundle data = new Bundle();
-				
-				// Setting the index of the currently selected item of mDrawerList
-				data.putInt("position", position);
-				
-				// Setting the position to the fragment
-				rFragment.setArguments(data);
-				
-				// Getting reference to the FragmentManager
-				FragmentManager fragmentManager  = getFragmentManager();
-				
-				// Creating a fragment transaction
-				FragmentTransaction ft = fragmentManager.beginTransaction();
-				
-				// Adding a fragment to the fragment transaction
-				ft.replace(R.id.content_frame, rFragment);
-				
-				// Committing the transaction
-				ft.commit();
-				
-				// Closing the drawer
-				mDrawerLayout.closeDrawer(mDrawerList);				
-				
+				openFragment(position);
 			}
-		});	
+		});
+
 	}
 
+	private void openFragment(int position){
+
+		String[] rivers = getResources().getStringArray(R.array.DrawerOptions);
+
+		//Currently selected river
+		mTitle = rivers[position];
+
+		// Creating a fragment object
+		PlanTrip rFragment = new PlanTrip();
+
+		// Creating a Bundle object
+		Bundle data = new Bundle();
+
+		// Setting the index of the currently selected item of mDrawerList
+		data.putInt("position", position);
+
+		// Setting the position to the fragment
+		rFragment.setArguments(data);
+
+		// Getting reference to the FragmentManager
+		FragmentManager fragmentManager  = getFragmentManager();
+
+		// Creating a fragment transaction
+		FragmentTransaction ft = fragmentManager.beginTransaction();
+
+		// Adding a fragment to the fragment transaction
+		ft.replace(R.id.content_frame, rFragment);
+
+		// Committing the transaction
+		ft.commit();
+		mDrawerLayout.closeDrawer(mDrawerList);
+
+	}
 
 	 @Override
 	 protected void onPostCreate(Bundle savedInstanceState) {
 		 super.onPostCreate(savedInstanceState);	     
 	     mDrawerToggle.syncState();
-		 mDrawerLayout.performClick();
+		 openFragment(0);
 	 }
 	
 	/** Handling the touch event of app icon */
